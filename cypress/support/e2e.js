@@ -15,3 +15,12 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+beforeEach(() => {
+    cy.visit('/', {
+      auth: {
+        username: Cypress.env('username'),
+        password: Cypress.env('password'),
+      },
+    });
+  });
