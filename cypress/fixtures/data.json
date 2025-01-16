@@ -10,5 +10,38 @@
   "password": "5Nintr1v1xsc",
   "wrongPassword": "rrr",
   "repeatPasswordSuccess": "5Nintr1v1xsc",
-  "repeatPasswordWrong": "5Nintr1v1xsc1"
+  "repeatPasswordWrong": "5Nintr1v1xsc1",
+  "correctEmail": "mkvak@gmail.com",
+  "correctPassword": "Barselona-1987",
+  "carMileage": 12345,
+  "brands": [
+    {
+      "name": "Audi",
+      "models": ["TT", "R8", "Q7", "A6", "A8"]
+    },
+    {
+      "name": "BMW",
+      "models": ["3", "5", "X5", "X6", "Z3"]
+    },
+    {
+      "name": "Ford",
+      "models": ["Fiesta", "Focus", "Fusion", "Mondeo", "Sierra"]
+    },
+    {
+      "name": "Porsche",
+      "models": ["911", "Cayenne", "Panamera"]
+    },
+    {
+      "name": "Fiat",
+      "models": ["Palio", "Ducato", "Panda", "Punto", "Scudo"]
+    }
+  ],
+  "addedCar": [
+    {
+      "name":"Audi TT",
+      "mileage": ["44644", "123456"],
+      "liters": [5, 10, 25, 50],
+      "totalCost": [1000, 2000, 3000, 4000]
+    }
+  ]
 }

@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import SignInForm from "../page-objects/forms/signInForm";
+
+Cypress.Commands.add("login", (username, password) => {
+  SignInForm.enterEmail(username);
+  SignInForm.enterPassword(password);
+  SignInForm.clickLogInButton();
+});

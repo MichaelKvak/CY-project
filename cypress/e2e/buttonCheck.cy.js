@@ -1,3 +1,4 @@
+import HomePage from "../page-objects/pages/HomePage";
 describe("Button check Test", () => {
   const elementsToCheck = {
     "Guest log in": "button.-guest",
@@ -16,9 +17,12 @@ describe("Button check Test", () => {
       className: "h4",
     },
   };
+  beforeEach(() => {
+    HomePage.openPage();
+  });
 
   it("should check header buttons", () => {
-    cy.get("header.header").within(() => {
+    cy.get("header").within(() => {
       cy.get("button.header_signin").should("exist").and("be.visible");
 
       Object.entries(elementsToCheck).forEach(([text, selector]) => {
@@ -36,7 +40,7 @@ describe("Button check Test", () => {
 
   it("should check footer buttons", () => {
     cy.get(".contacts_socials.socials")
-      .find(".socials_link")
+      .find("a.socials_link")
       .should("have.length", 5)
       .each(($el) => {
         cy.wrap($el)
