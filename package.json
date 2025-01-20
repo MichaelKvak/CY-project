@@ -5,7 +5,11 @@
   "scripts": {
     "test": "cypress run",
     "test:report": "npm run test && npm run generate-report",
-    "generate-report": "mochawesome-report-generator cypress/reports/mochawesome.json --reportDir cypress/reports --inline"
+    "generate-report": "mochawesome-report-generator cypress/reports/mochawesome.json --reportDir cypress/reports --inline",
+    "test:qauto1": "npx cypress run --config-file cypress.config.js",
+    "test:qauto2": "npx cypress run --config-file cypress.qauto2.config.js",
+    "open:qauto1": "npx cypress open --config-file cypress.config.js",
+    "open:qauto2": "npx cypress open --config-file cypress.qauto2.config.js"
   },
   "keywords": [],
   "author": "",
