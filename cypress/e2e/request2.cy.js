@@ -15,8 +15,7 @@ describe("Add car form", () => {
     });
   });
 
-  it("Change user name and verify in UI", () => {
-    // Дані для PUT-запиту
+  it("Change user name and verify in UI", () => {    
     const requestBody = {
       photo: "default-user.png",
       name: "Polar",
@@ -37,8 +36,7 @@ describe("Add car form", () => {
       expect(response.body.data.name).to.eq("Polar");
       expect(response.body.data.lastName).to.eq("Bear");
     });
-
-    // Інтерцепт для профілю
+    
     cy.intercept("GET", "api/users/profile", {
       statusCode: 200,
       body: {
